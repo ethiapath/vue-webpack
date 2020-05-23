@@ -62,7 +62,8 @@ module.exports = {
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       inject: true,
-      template: path.resolve(__dirname, 'dist/index.html'),
+      template: path.resolve(__dirname, 'src/index.html'),
+      filename: path.resolve(__dirname, 'dist/index.html'),
     }),
     new ResourceHintWebpackPlugin(),
   ],
