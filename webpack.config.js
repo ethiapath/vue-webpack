@@ -5,14 +5,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const ResourceHintWebpackPlugin = require('resource-hints-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-// const appDir = __dirname;
-
-// // get absolute path
-// const getAbsPath = relPath => path.resolve(appDir, relPath);
-
-// const host = process.env.HOST || 'localhost';
-
-// process.env.NODE_ENV = 'development';
+process.env.NODE_ENV = 'development';
 
 module.exports = {
   entry: './src/index.ts',
@@ -64,6 +57,7 @@ module.exports = {
       inject: true,
       template: path.resolve(__dirname, 'src/index.html'),
       filename: path.resolve(__dirname, 'dist/index.html'),
+      showErrors: process.env.NODE_ENV === 'development',
     }),
     new ResourceHintWebpackPlugin(),
   ],
