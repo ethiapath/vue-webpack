@@ -4,6 +4,7 @@ var webpack = require('webpack')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const ResourceHintWebpackPlugin = require('resource-hints-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 process.env.NODE_ENV = 'development';
 
@@ -26,13 +27,13 @@ module.exports = {
             // other preprocessors should work out of the box, no loader config like this necessary.
             'scss': 'vue-style-loader!css-loader!sass-loader',
             'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax',
+            // 'css': 'vue-style-loader!css-loader'
           }
           // other vue-loader options go here
         }
       },
       {
-        test: /\.css$/, use: 'css-loader',
-
+        test: /\.css$/, use: [MiniCssExtractPlugin.loader, 'css-loader'], 
       },
       {
         test: /\.tsx|\.ts?$/,
@@ -53,6 +54,7 @@ module.exports = {
   },
   plugins: [
     new VueLoaderPlugin(),
+    new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       inject: true,
       template: path.resolve(__dirname, 'src/index.html'),

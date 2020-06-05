@@ -33,7 +33,7 @@ export default Vue.extend({
 });
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
 
 .greeting {
     font-size: 20px;

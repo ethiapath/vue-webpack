@@ -1,16 +1,16 @@
-<template lang="pug">
-    div (class="detail-container")
-        section (class="device source")
-        section (class="device effect")
-        section (class="device effect")
-
-
+<template>
+    <div class="detail-container">
+        <section class="device source">source</section>
+        <section class="device effect">effect</section>
+        <section class="device effect">effect</section>
+    </div> 
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
-    data: {
+    name: 'detail-bar',
+    data: () => ({
         devices: [
             {
                 type: 'source',
@@ -23,13 +23,13 @@ export default Vue.extend({
             {
                 type: 'effect',
                 name: 'eq'
-            },       
+            },
         ]
-    }
+    })
 })
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 .detail-container {
     display: flex;
     flex-direction: row;
@@ -37,5 +37,6 @@ export default Vue.extend({
 .device {
     border: 1px solid black;
     height: 100px;
+    width: 60px;
 }
 </style>
