@@ -6,7 +6,8 @@ Still need to get scss working...
 
 
 # todo
-[ ] - Add scss support
+- [ ] Add scss support
+- [ ] Add github action for continuous delivery (and CI?)
 
 
 Below this line comes from the original repo, I'll update it later.
