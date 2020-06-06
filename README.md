@@ -1,6 +1,20 @@
-This repo is deprecated, it was created in the days before Vue shipped with TypeScript out of the box. Now the 
+I wanted to use vue and webpack so I could use more flexible build systems later on.
+So I spent some time learning webpack and getting this project working again with `.vue` files.
+
+Still need to get scss working...
+
+
+
+# todo
+[ ] - Add scss support
+
+
+Below this line comes from the original repo, I'll update it later.
+---
+
+~~This repo is deprecated, it was created in the days before Vue shipped with TypeScript out of the box. Now the 
 best path to get started is through [the official CLI](https://cli.vuejs.org). We'll keep this repo around as
-a useful archive.
+a useful archive.~~
 
 ---
 
